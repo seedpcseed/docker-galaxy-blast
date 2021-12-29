@@ -1,0 +1,15 @@
+version: "2.0"
+
+instances:
+
+  galaxyblast:
+    build:
+      context: .
+      options:
+        - fakeroot
+    volumes:
+      - ./databases:/databases
+
+    ports:
+      - "8443:8443"
+      - "8080:8080"
